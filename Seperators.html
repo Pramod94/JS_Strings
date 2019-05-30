@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3 style="text-align: center; text-decoration:underline">Convert the comma sepearated Stirng into Array</h3>
+
+    <div>
+        <p><strong>Method 1 :</strong>Make use of <code> split(', ')</code> function</p>
+
+        <p><strong>Method 2 : </strong> <br>
+            This approach involves iterating through each character in the string and checking for the comma.
+            A variable previousIndex is defined which keeps the track of the first character of the next string.
+            The slice method is then used to remove the portion of the string between the previous index and
+            the current location of the comma found. This string is then pushed on to a new array.
+            This process is then repeated for the whole length of the string.
+            The final array contains all the separated strings.
+        </p>
+    </div>
+
+    <script>
+
+        //Method 2
+
+        function seperators() {
+            var originalString = "One, Two, Three, Four, Five";
+            var result = [];
+
+            var previousIndex = 0;
+
+            for (var i = 0; i < originalString.length; i++) {
+
+                if (originalString[i] == ',') {
+                    var content = originalString.slice(previousIndex, i);
+                    console.log(content);
+
+                    result.push(content);
+                    previousIndex = i+1;
+                }
+
+                //previousIndex = i+1;
+                
+            }
+
+            result.push(originalString.slice(previousIndex,i)); // pushing the last element
+
+            console.log(result);
+        }
+
+        seperators();
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
