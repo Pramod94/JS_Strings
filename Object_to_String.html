@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Object to String</h3>
+
+    <script>
+        
+        var obj1 = {
+            color : 'green',
+            engine : '400cc',
+            gears : 5
+        };
+
+        var num = 12345;
+
+        //Method 1
+
+        var str1 = String(num);
+
+        console.log(typeof(str1));
+
+
+        //Method 2
+
+        var str2 = JSON.stringify(obj1);
+
+        console.log(str2);
+
+
+        //Arrays can also be converted to Strings
+
+        var ary = [33, 'bike', 'car'];
+
+        var aryStr = JSON.stringify(ary);
+
+        console.log(aryStr);
+
+        console.log(typeof(aryStr[0]));
+
+    </script>
+
+</body>
+</html>
