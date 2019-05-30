@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+  
+    <h4>Remove Line Breaks</h4>
+    <hr>
+    <textarea name="lb" id="lineBreaks" cols="30" rows="10">
+        Hello all
+        This content is used to demonstrate
+        to remove line breaks.
+    </textarea>
+    <br>
+
+    <button onclick="removeLineBreaks()">Remove Line Breaks</button>
+
+    <div>
+        <h4>Result : </h4>
+        <p id="res"></p>
+    </div>
+
+    <script>
+
+        function lineBreaks(str){
+           return str.replace(/[\n]+/gm," ");
+        }
+
+            function removeLineBreaks(){
+                var content = document.getElementById('lineBreaks').value;
+
+                document.getElementById('res').innerHTML = lineBreaks(content);
+
+            }
+    
+            
+        </script>
+
+</body>
+
+</html>
