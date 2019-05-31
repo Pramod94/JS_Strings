@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Get the characters from a String</h3>
+
+    <script>
+
+         var str = "GeeksforGeeks";
+
+        //Method 1
+         var singleChar = str.split(''); 
+
+         console.log(singleChar);
+
+
+        //Method 2
+         var singleChar1 = Array.from(str);
+
+         console.log(singleChar1);   
+
+         var obj1 = {
+             name : 'Bentley',
+             engine : '1800cc',
+             gears : 5
+         };
+
+        //  var singleChar2 = Array.from(obj1.keys);
+
+        //  console.log(singleChar2);
+
+         console.log(Object.values(obj1));
+
+    </script>
+
+</body>
+</html>
