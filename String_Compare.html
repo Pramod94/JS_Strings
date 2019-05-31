@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Compare Two Strings</h3>
+
+    <div>
+        String1 : <input type="text" name="" id="str1">
+        String2 : <input type="text" name="" id="str2">
+        <button onclick="compareStrings()">Compare</button> <br>
+
+        <p id="res"></p>
+    </div>
+
+    <script>
+        
+        var a = document.getElementById('str1');
+        
+
+        var b = document.getElementById('str2');
+       
+
+        function compareStrings(){
+            var str1 = a.value;
+            var str2 = b.value;
+           
+           //Method 1
+            //var result = str1.localeCompare(str2);
+
+           //Method 2
+           var result = str1 > str2 ? 1 : (str1 < str2 ? -1 : 0) ;
+
+            var element = document.getElementById('res');
+           
+
+            if(result == 0){
+               element.innerHTML = "Both the strings are same";
+            } else if(result == -1){
+                element.innerHTML = str1 +" comes before " + str2;
+            } else{
+                element.innerHTML = str1 +" comes after " + str2;
+            }
+        }
+        
+    </script>
+</body>
+</html>
